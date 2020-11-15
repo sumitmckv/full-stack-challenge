@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.ts",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "index.ts"
+    }
+  ],
+  "alias": ["full-stack-challenge-api"],
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "8181",
+    "CORS_ORIGIN": "https://full-stack-challenge.vercel.app"
+  }
+}
